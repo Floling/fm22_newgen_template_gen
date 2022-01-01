@@ -5,4 +5,4 @@ const genRandomNum = (min, max) => {
     return randomNumber;
   };
   
-  export { genRandomNum };
+export { genRandomNum };

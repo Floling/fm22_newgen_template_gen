@@ -1,7 +1,9 @@
-/* 
 body {
     font-family: "Roboto", sans-serif;
     background-color: #201d1d;
-    color: lightsalmon;
+    color: white;
   }
-*/ 
+
+.attributes-wrapper {
+    display: flex;
+}
