@@ -1,9 +1,20 @@
 body {
-    font-family: "Roboto", sans-serif;
-    background-color: #201d1d;
-    color: white;
-  }
+  font-family: "Roboto", sans-serif;
+  background-color: #201d1d;
+  color: white;
+}
 
 .attributes-wrapper {
-    display: flex;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+p.primary-attribute {
+  color: lightgreen;
+  font-weight: 600;
+}
+
+p.secondary-attribute {
+  color: lightseagreen;
+  font-weight: 600;
 }

@@ -215,7 +215,62 @@ const advPlaAtt = () => {
             </div>
         </div>
     `;
-}
+};
+// AP-S
+const advPlaSup = () => {
+    document.getElementById("dropdown-choice").innerHTML = `
+        <h2>Attributes AP-S</h3>
+        <div class='attributes-wrapper'>
+            <div class='technical'>
+            <h3>Technical</h3>
+            <p>Corners: <span>${tertiaryAttribute()}</span></p>
+            <p>Crossing: <span>${tertiaryAttribute()}</span></p>
+            <p class='secondary-attribute'>Dribbling: <span>${secondaryAttribute()}</span></p>
+            <p>Finishing: <span>${tertiaryAttribute()}</span></p>
+            <p class='primary-attribute'>First Touch: <span>${primaryAttribute()}</span></p>
+            <p>Free Kick Taking: <span>${tertiaryAttribute()}</span></p>
+            <p>Heading: <span>${tertiaryAttribute()}</span></p>
+            <p>Long Shots: <span>${tertiaryAttribute()}</span></p>
+            <p>Long Throws: <span>${tertiaryAttribute()}</span></p>
+            <p>Marking: <span>${tertiaryAttribute()}</span></p>
+            <p class='primary-attribute'>Passing: <span>${primaryAttribute()}</span></p>
+            <p>Penalty Taking: <span>${tertiaryAttribute()}</span></p>
+            <p>Tackling: <span>${tertiaryAttribute()}</span></p>
+            <p class='primary-attribute'>Technique: <span>${primaryAttribute()}</span></p>
+            </div>
+        
+            <div class='mental'>
+            <h3>Mental</h3>
+            <p>Aggression: <span>${personalityAttributes()}</span></p>
+            <p>Anticipation: <span>${tertiaryAttribute()}</span></p>
+            <p>Bravery: <span>${personalityAttributes()}</span></p>
+            <p class='primary-attribute'>Composure: <span>${primaryAttribute()}</span></p>
+            <p>Concentration: <span>${tertiaryAttribute()}</span></p>
+            <p class='primary-attribute'>Decisions: <span>${primaryAttribute()}</span></p>
+            <p>Determination: <span>${personalityAttributes()}</span></p>
+            <p>Flair: <span>${tertiaryAttribute()}</span></p>
+            <p>Leadership: <span>${personalityAttributes()}</span></p>
+            <p class='primary-attribute'>Off The Ball: <span>${primaryAttribute()}</span></p>
+            <p>Positioning: <span>${tertiaryAttribute()}</span></p>
+            <p class='primary-attribute'>Teamwork: <span>${personalityAttributes()}</span></p>
+            <p class='primary-attribute'>Vision: <span>${primaryAttribute()}</span></p>
+            <p>Work Rate: <span>${personalityAttributes()}</span></p>
+            </div>
+        
+            <div class='physical'>
+            <h3>Physical</h3>
+            <p>Acceleration: <span>${tertiaryAttribute()}</span></p>
+            <p class='secondary-attribute'>Agility: <span>${secondaryAttribute()}</span></p>
+            <p>Balance: <span>${tertiaryAttribute()}</span></p>
+            <p>Jumping Reach: <span>0</span></p>
+            <p>Natural Fitness: <span>${fitnessAttributes()}</span></p>
+            <p>Pace: <span>${tertiaryAttribute()}</span></p>
+            <p>Stamina: <span>${tertiaryAttribute()}</span></p>
+            <p>Strength: <span>${tertiaryAttribute()}</span></p>
+            </div>
+        </div>
+    `;
+};
 
 
 // This section populates the normal player attributes based on the Dropdown selection 
@@ -233,12 +288,15 @@ function dropdownChoice() {
     else if (roleListValue === "ap-a") {
         advPlaAtt();
     }
+    else if (roleListValue === "ap-s") {
+        advPlaSup();
+    }
     /*
     document.getElementById("dropdown-choice").innerHTML = `
       <p>The selected Value is: ${roleListValue}</p><br>
       <p>The selected Text is: ${roleListText}</p>
     `;
     */
-}
+};
 
 roleList.addEventListener("change", dropdownChoice());
