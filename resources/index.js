@@ -51,6 +51,135 @@ const fitnessAttributes = () => genRandomNum(14, 21);
 
 
 // here come all the player role-attributes
+
+// AF-A: Advanced Forward - Attack
+const advForAtt = () => {
+    document.getElementById("dropdown-choice").innerHTML = `
+        <h2>Attributes AF-A</h3>
+        <div class='attributes-wrapper'>
+            <div class='technical'>
+                <h3>Technical</h3>
+                <p>
+                    Corners: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p>
+                    Crossing: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p class='primary-attribute'>
+                    Dribbling: <span>${primaryAttribute()}</span>
+                </p>
+                <p class='primary-attribute'>
+                    Finishing: <span>${primaryAttribute()}</span>
+                </p>
+                <p class='primary-attribute'>
+                    First Touch: <span>${primaryAttribute()}</span>
+                </p>
+                <p>
+                    Free Kick Taking: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p>
+                    Heading: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p>
+                    Long Shots: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p>
+                    Long Throws: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p>
+                    Marking: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p class='secondary-attribute'>
+                    Passing: <span>${secondaryAttribute()}</span>
+                </p>
+                <p>
+                    Penalty Taking: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p>
+                    Tackling: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p class='primary-attribute'>
+                    Technique: <span>${primaryAttribute()}</span>
+                </p>
+            </div>
+        
+            <div class='mental'>
+                <h3>Mental</h3>
+                <p>
+                    Aggression: <span>${personalityAttributes()}</span>
+                </p>
+                <p class='secondary-attribute'>
+                    Anticipation: <span>${secondaryAttribute()}</span>
+                </p>
+                <p>
+                    Bravery: <span>${personalityAttributes()}</span>
+                </p>
+                <p class='primary-attribute'>
+                    Composure: <span>${primaryAttribute()}</span>
+                </p>
+                <p>
+                    Concentration: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p class='secondary-attribute'>
+                    Decisions: <span>${secondaryAttribute()}</span>
+                </p>
+                <p>
+                    Determination: <span>${personalityAttributes()}</span>
+                </p>
+                <p>
+                    Flair: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p>
+                    Leadership: <span>${personalityAttributes()}</span>
+                </p>
+                <p class='primary-attribute'>
+                    Off The Ball: <span>${primaryAttribute()}</span>
+                </p>
+                <p>
+                    Positioning: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p>
+                    Teamwork: <span>${personalityAttributes()}</span>
+                </p>
+                <p>
+                    Vision: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p class='secondary-attribute'>
+                    Work Rate: <span>${personalityAttributes()}</span>
+                </p>
+            </div>
+        
+            <div class='physical'>
+                <h3>Physical</h3>
+                <p class='primary-attribute'>
+                    Acceleration: <span>${primaryAttribute()}</span>
+                </p>
+                <p class='secondary-attribute'>
+                    Agility: <span>${secondaryAttribute()}</span>
+                </p>
+                <p class='secondary-attribute'>
+                    Balance: <span>${secondaryAttribute()}</span>
+                </p>
+                <p>
+                    Jumping Reach: <span>0</span>
+                </p>
+                <p>
+                    Natural Fitness: <span>${fitnessAttributes()}</span>
+                </p>
+                <p class='secondary-attribute'>
+                    Pace: <span>${secondaryAttribute()}</span>
+                </p>
+                <p class='secondary-attribute'>
+                    Stamina: <span>${secondaryAttribute()}</span>
+                </p>
+                <p>
+                    Strength: <span>${tertiaryAttribute()}</span>
+                </p>
+            </div>
+        </div>
+    `;
+};
+
 // AM-A
 const attMidAtt = () => {
     document.getElementById("dropdown-choice").innerHTML = `
@@ -446,7 +575,10 @@ const roleList = document.getElementById("role-list");
 function dropdownChoice() {
     const roleListValue = roleList.options[roleList.selectedIndex].value;
     const roleListText = roleList.options[roleList.selectedIndex].text;
-    if (roleListValue === "am-a") {
+    if (roleListValue === "af-a") {
+        advForAtt();
+    }    
+    else if (roleListValue === "am-a") {
         attMidAtt();
     }
     else if (roleListValue === "am-s") {
@@ -466,6 +598,9 @@ function dropdownChoice() {
     }
     else if (roleListValue === "bpd-s") {
         BaPlDeSto();
+    }
+    else {
+        roleList.style.display = 'blank';
     }
     /*
     document.getElementById("dropdown-choice").innerHTML = `
