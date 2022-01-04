@@ -51,6 +51,7 @@ const fitnessAttributes = () => genRandomNum(14, 21);
 
 
 // here come all the player role-attributes
+const dorpdownChoice = document.getElementById('dropdown-choice');
 
 // AF-A: Advanced Forward - Attack
 const advForAtt = () => {
@@ -576,31 +577,39 @@ function dropdownChoice() {
     const roleListValue = roleList.options[roleList.selectedIndex].value;
     const roleListText = roleList.options[roleList.selectedIndex].text;
     if (roleListValue === "af-a") {
+        dorpdownChoice.style.display = 'inline-block';
         advForAtt();
     }    
     else if (roleListValue === "am-a") {
+        dorpdownChoice.style.display = 'inline-block';
         attMidAtt();
     }
     else if (roleListValue === "am-s") {
+        dorpdownChoice.style.display = 'inline-block';
         attMidSup();
     }
     else if (roleListValue === "ap-a") {
+        dorpdownChoice.style.display = 'inline-block';
         advPlaAtt();
     }
     else if (roleListValue === "ap-s") {
+        dorpdownChoice.style.display = 'inline-block';
         advPlaSup();
     }
     else if (roleListValue === "bpd-c") {
+        dorpdownChoice.style.display = 'inline-block';
         BaPlDeCov();
     }
     else if (roleListValue === "bpd-d") {
+        dorpdownChoice.style.display = 'inline-block';
         BaPlDeDef();
     }
     else if (roleListValue === "bpd-s") {
+        dorpdownChoice.style.display = 'inline-block';
         BaPlDeSto();
     }
     else {
-        roleList.style.display = 'blank';
+        dorpdownChoice.style.display = 'none';
     }
     /*
     document.getElementById("dropdown-choice").innerHTML = `

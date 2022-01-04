@@ -27,7 +27,7 @@ header h1 {
 }
 
 .all-attributes-wrapper p {
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
 }
 
 .all-attributes-wrapper h2 {
@@ -35,7 +35,6 @@ header h1 {
   font-size: 25px;
   font-weight: 300;
 }
-
 
 /* Hidden Attributes Area*/
 /* #attributes {
@@ -57,7 +56,6 @@ header h1 {
   padding: 4px;
   font-size: 16px;
 }
-
 
 /* Normal Attributes Area */
 .attributes-wrapper {
