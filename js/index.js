@@ -1085,6 +1085,134 @@ const balWinSup = () => {
     `;
 };
 
+// CAR-S: Carrilero - Support
+const carrilSup = () => {
+    dropChoiceEle.innerHTML = `
+        <h2>Carrilero - Support</h3>
+        <div class='attributes-wrapper'>
+            <div class='technical'>
+                <h3>Technical</h3>
+                <p>
+                    Corners: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p>
+                    Crossing: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p>
+                    Dribbling: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p>
+                    Finishing: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p class='secondary-attribute'>
+                    First Touch: <span>${secondaryAttribute()}</span>
+                </p>
+                <p>
+                    Free Kick Taking: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p>
+                    Heading: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p>
+                    Long Shots: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p>
+                    Long Throws: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p>
+                    Marking: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p class='primary-attribute'>
+                    Passing: <span>${primaryAttribute()}</span>
+                </p>
+                <p>
+                    Penalty Taking: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p class='primary-attribute'>
+                    Tackling: <span>${primaryAttribute()}</span>
+                </p>
+                <p class='secondary-attribute'>
+                    Technique: <span>${secondaryAttribute()}</span>
+                </p>
+            </div>
+        
+            <div class='mental'>
+                <h3>Mental</h3>
+                <p>
+                    Aggression: <span>${personalityAttributes()}</span>
+                </p>
+                <p class='secondary-attribute'>
+                    Anticipation: <span>${secondaryAttribute()}</span>
+                </p>
+                <p>
+                    Bravery: <span>${personalityAttributes()}</span>
+                </p>
+                <p class='secondary-attribute'>
+                    Composure: <span>${secondaryAttribute()}</span>
+                </p>
+                <p class='secondary-attribute'>
+                    Concentration: <span>${secondaryAttribute()}</span>
+                </p>
+                <p class='primary-attribute'>
+                    Decisions: <span>${primaryAttribute()}</span>
+                </p>
+                <p>
+                    Determination: <span>${personalityAttributes()}</span>
+                </p>
+                <p>
+                    Flair: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p>
+                    Leadership: <span>${personalityAttributes()}</span>
+                </p>
+                <p class='secondary-attribute'>
+                    Off The Ball: <span>${secondaryAttribute()}</span>
+                </p>
+                <p class='primary-attribute'>
+                    Positioning: <span>${primaryAttribute()}</span>
+                </p>
+                <p class='primary-attribute'>
+                    Teamwork: <span>${personalityAttributes()}</span>
+                </p>
+                <p class='secondary-attribute'>
+                    Vision: <span>${secondaryAttribute()}</span>
+                </p>
+                <p class='primary-attribute'>
+                    Work Rate: <span>${personalityAttributes()}</span>
+                </p>
+            </div>
+        
+            <div class='physical'>
+                <h3>Physical</h3>
+                <p>
+                    Acceleration: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p>
+                    Agility: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p>
+                    Balance: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p>
+                    Jumping Reach: <span>0</span>
+                </p>
+                <p>
+                    Natural Fitness: <span>${fitnessAttributes()}</span>
+                </p>
+                <p>
+                    Pace: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p class='primary-attribute'>
+                    Stamina: <span>${primaryAttribute()}</span>
+                </p>
+                <p>
+                    Strength: <span>${tertiaryAttribute()}</span>
+                </p>
+            </div>
+        </div>
+    `;
+};
+
 // This section populates the normal player attributes based on the Dropdown selection 
 const roleList = document.getElementById("role-list");
 
@@ -1138,6 +1266,10 @@ function dropdownChoice() {
     else if (roleListValue === "bwm-s") {
         dropChoiceEle.style.display = 'inline-block';
         balWinSup();
+    }
+    else if (roleListValue === "car-s") {
+        dropChoiceEle.style.display = 'inline-block';
+        carrilSup();
     }
     else {
         dropChoiceEle.style.display = 'none';
