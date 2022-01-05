@@ -1344,7 +1344,7 @@ const cenDefCov = () => {
 // CD-D: Central Defender - Defend
 const cenDefDef = () => {
     dropChoiceEle.innerHTML = `
-        <h2>Central Defender - Cover</h3>
+        <h2>Central Defender - Defend</h3>
         <div class='attributes-wrapper'>
             <div class='technical'>
                 <h3>Technical</h3>
