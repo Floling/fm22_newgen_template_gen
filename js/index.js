@@ -51,11 +51,11 @@ const fitnessAttributes = () => genRandomNum(14, 21);
 
 
 // here come all the player role-attributes
-const dorpdChoiceEle = document.getElementById('dropdown-choice');
+const dropChoiceEle = document.getElementById('dropdown-choice');
 
 // AF-A: Advanced Forward - Attack
 const advForAtt = () => {
-    document.getElementById("dropdown-choice").innerHTML = `
+    dropChoiceEle.innerHTML = `
         <h2>Attributes AF-A</h3>
         <div class='attributes-wrapper'>
             <div class='technical'>
@@ -183,7 +183,7 @@ const advForAtt = () => {
 
 // AM-A
 const attMidAtt = () => {
-    document.getElementById("dropdown-choice").innerHTML = `
+    dropChoiceEle.innerHTML = `
         <h2>Attributes AM-A</h3>
         <div class='attributes-wrapper'>
             <div class='technical'>
@@ -236,9 +236,10 @@ const attMidAtt = () => {
         </div>
     `;
 };
+
 // AM-S
 const attMidSup = () => {
-    document.getElementById("dropdown-choice").innerHTML = `
+    dropChoiceEle.innerHTML = `
         <h2>Attributes AM-S</h3>
         <div class='attributes-wrapper'>
             <div class='technical'>
@@ -291,9 +292,138 @@ const attMidSup = () => {
         </div>
     `;
 };
+
+// ANC-D: Anchor Man - Defend
+const ancManDef = () => {
+    dropChoiceEle.innerHTML = `
+        <h2>Attributes ANC-D</h3>
+        <div class='attributes-wrapper'>
+            <div class='technical'>
+                <h3>Technical</h3>
+                <p>
+                    Corners: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p>
+                    Crossing: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p>
+                    Dribbling: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p>
+                    Finishing: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p>
+                    First Touch: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p>
+                    Free Kick Taking: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p>
+                    Heading: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p>
+                    Long Shots: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p>
+                    Long Throws: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p class='primary-attribute'>
+                    Marking: <span>${primaryAttribute()}</span>
+                </p>
+                <p>
+                    Passing: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p>
+                    Penalty Taking: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p class='primary-attribute'>
+                    Tackling: <span>${primaryAttribute()}</span>
+                </p>
+                <p>
+                    Technique: <span>${tertiaryAttribute()}</span>
+                </p>
+            </div>
+        
+            <div class='mental'>
+                <h3>Mental</h3>
+                <p>
+                    Aggression: <span>${personalityAttributes()}</span>
+                </p>
+                <p class='primary-attribute'>
+                    Anticipation: <span>${primaryAttribute()}</span>
+                </p>
+                <p>
+                    Bravery: <span>${personalityAttributes()}</span>
+                </p>
+                <p class='secondary-attribute'>
+                    Composure: <span>${secondaryAttribute()}</span>
+                </p>
+                <p class='primary-attribute'>
+                    Concentration: <span>${primaryAttribute()}</span>
+                </p>
+                <p class='primary-attribute'>
+                    Decisions: <span>${primaryAttribute()}</span>
+                </p>
+                <p>
+                    Determination: <span>${personalityAttributes()}</span>
+                </p>
+                <p>
+                    Flair: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p>
+                    Leadership: <span>${personalityAttributes()}</span>
+                </p>
+                <p>
+                    Off The Ball: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p class='primary-attribute'>
+                    Positioning: <span>${primaryAttribute()}</span>
+                </p>
+                <p class='secondary-attribute'>
+                    Teamwork: <span>${personalityAttributes()}</span>
+                </p>
+                <p>
+                    Vision: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p>
+                    Work Rate: <span>${personalityAttributes()}</span>
+                </p>
+            </div>
+        
+            <div class='physical'>
+                <h3>Physical</h3>
+                <p>
+                    Acceleration: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p>
+                    Agility: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p>
+                    Balance: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p>
+                    Jumping Reach: <span>0</span>
+                </p>
+                <p>
+                    Natural Fitness: <span>${fitnessAttributes()}</span>
+                </p>
+                <p>
+                    Pace: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p>
+                    Stamina: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p  class='secondary-attribute'>
+                    Strength: <span>${secondaryAttribute()}</span>
+                </p>
+            </div>
+        </div>
+    `;
+};
+
 // AP-A
 const advPlaAtt = () => {
-    document.getElementById("dropdown-choice").innerHTML = `
+    dropChoiceEle.innerHTML = `
         <h2>Attributes AP-A</h3>
         <div class='attributes-wrapper'>
             <div class='technical'>
@@ -346,9 +476,10 @@ const advPlaAtt = () => {
         </div>
     `;
 };
+
 // AP-S
 const advPlaSup = () => {
-    document.getElementById("dropdown-choice").innerHTML = `
+    dropChoiceEle.innerHTML = `
         <h2>Attributes AP-S</h3>
         <div class='attributes-wrapper'>
             <div class='technical'>
@@ -404,7 +535,7 @@ const advPlaSup = () => {
 
 // BPD-C: Ball Playing Defender - Cover
 const BaPlDeCov = () => {
-    document.getElementById("dropdown-choice").innerHTML = `
+    dropChoiceEle.innerHTML = `
         <h2>Attributes BPD-C</h3>
         <div class='attributes-wrapper'>
             <div class='technical'>
@@ -460,7 +591,7 @@ const BaPlDeCov = () => {
 
 // BPD-D: Ball Playing Defender - Defend
 const BaPlDeDef = () => {
-    document.getElementById("dropdown-choice").innerHTML = `
+    dropChoiceEle.innerHTML = `
         <h2>Attributes BPD-D</h3>
         <div class='attributes-wrapper'>
             <div class='technical'>
@@ -516,7 +647,7 @@ const BaPlDeDef = () => {
 
 // BPD-D: Ball Playing Defender - Defend
 const BaPlDeSto = () => {
-    document.getElementById("dropdown-choice").innerHTML = `
+    dropChoiceEle.innerHTML = `
         <h2>Attributes BPD-S</h3>
         <div class='attributes-wrapper'>
             <div class='technical'>
@@ -575,41 +706,45 @@ const roleList = document.getElementById("role-list");
 
 function dropdownChoice() {
     const roleListValue = roleList.options[roleList.selectedIndex].value;
-    const roleListText = roleList.options[roleList.selectedIndex].text;
+    // const roleListText = roleList.options[roleList.selectedIndex].text;
     if (roleListValue === "af-a") {
-        dorpdChoiceEle.style.display = 'inline-block';
+        dropChoiceEle.style.display = 'inline-block';
         advForAtt();
     }    
     else if (roleListValue === "am-a") {
-        dorpdChoiceEle.style.display = 'inline-block';
+        dropChoiceEle.style.display = 'inline-block';
         attMidAtt();
     }
     else if (roleListValue === "am-s") {
-        dorpdChoiceEle.style.display = 'inline-block';
+        dropChoiceEle.style.display = 'inline-block';
         attMidSup();
     }
+    else if (roleListValue === "anc-d") {
+        dropChoiceEle.style.display = 'inline-block';
+        ancManDef();
+    }
     else if (roleListValue === "ap-a") {
-        dorpdChoiceEle.style.display = 'inline-block';
+        dropChoiceEle.style.display = 'inline-block';
         advPlaAtt();
     }
     else if (roleListValue === "ap-s") {
-        dorpdChoiceEle.style.display = 'inline-block';
+        dropChoiceEle.style.display = 'inline-block';
         advPlaSup();
     }
     else if (roleListValue === "bpd-c") {
-        dorpdChoiceEle.style.display = 'inline-block';
+        dropChoiceEle.style.display = 'inline-block';
         BaPlDeCov();
     }
     else if (roleListValue === "bpd-d") {
-        dorpdChoiceEle.style.display = 'inline-block';
+        dropChoiceEle.style.display = 'inline-block';
         BaPlDeDef();
     }
     else if (roleListValue === "bpd-s") {
-        dorpdChoiceEle.style.display = 'inline-block';
+        dropChoiceEle.style.display = 'inline-block';
         BaPlDeSto();
     }
     else {
-        dorpdChoiceEle.style.display = 'none';
+        dropChoiceEle.style.display = 'none';
     }
     /*
     document.getElementById("dropdown-choice").innerHTML = `
