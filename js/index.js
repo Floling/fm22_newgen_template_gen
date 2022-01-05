@@ -181,7 +181,7 @@ const advForAtt = () => {
     `;
 };
 
-// AM-A
+// AM-A: Attacking Midfielder - Attack
 const attMidAtt = () => {
     dropChoiceEle.innerHTML = `
         <h2>Attributes AM-A</h3>
@@ -237,7 +237,7 @@ const attMidAtt = () => {
     `;
 };
 
-// AM-S
+// AM-S: Attacking Midfielder - Support
 const attMidSup = () => {
     dropChoiceEle.innerHTML = `
         <h2>Attributes AM-S</h3>
@@ -421,7 +421,7 @@ const ancManDef = () => {
     `;
 };
 
-// AP-A
+// AP-A: Advanced Playmaker - Attack
 const advPlaAtt = () => {
     dropChoiceEle.innerHTML = `
         <h2>Attributes AP-A</h3>
@@ -477,7 +477,7 @@ const advPlaAtt = () => {
     `;
 };
 
-// AP-S
+// AP-S: Advanced Playmaker - Support
 const advPlaSup = () => {
     dropChoiceEle.innerHTML = `
         <h2>Attributes AP-S</h3>
@@ -584,6 +584,134 @@ const BaPlDeCov = () => {
             <p class='primary-attribute'>Pace: <span>${primaryAttribute()}</span></p>
             <p>Stamina: <span>${tertiaryAttribute()}</span></p>
             <p class='secondary-attribute'>Strength: <span>${secondaryAttribute()}</span></p>
+            </div>
+        </div>
+    `;
+};
+
+// B2B-S: Box to Box - support
+const boxBoxSup = () => {
+    dropChoiceEle.innerHTML = `
+        <h2>Attributes B2B-S</h3>
+        <div class='attributes-wrapper'>
+            <div class='technical'>
+                <h3>Technical</h3>
+                <p>
+                    Corners: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p>
+                    Crossing: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p class='secondary-attribute'>
+                    Dribbling: <span>${secondaryAttribute()}</span>
+                </p>
+                <p class='secondary-attribute'>
+                    Finishing: <span>${secondaryAttribute()}</span>
+                </p>
+                <p class='secondary-attribute'>
+                    First Touch: <span>${secondaryAttribute()}</span>
+                </p>
+                <p>
+                    Free Kick Taking: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p>
+                    Heading: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p class='secondary-attribute'>
+                    Long Shots: <span>${secondaryAttribute()}</span>
+                </p>
+                <p>
+                    Long Throws: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p>
+                    Marking: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p class='primary-attribute'>
+                    Passing: <span>${primaryAttribute()}</span>
+                </p>
+                <p>
+                    Penalty Taking: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p class='primary-attribute'>
+                    Tackling: <span>${primaryAttribute()}</span>
+                </p>
+                <p class='secondary-attribute'>
+                    Technique: <span>${secondaryAttribute()}</span>
+                </p>
+            </div>
+        
+            <div class='mental'>
+                <h3>Mental</h3>
+                <p class='secondary-attribute'>
+                    Aggression: <span>${personalityAttributes()}</span>
+                </p>
+                <p class='secondary-attribute'>
+                    Anticipation: <span>${secondaryAttribute()}</span>
+                </p>
+                <p>
+                    Bravery: <span>${personalityAttributes()}</span>
+                </p>
+                <p class='secondary-attribute'>
+                    Composure: <span>${secondaryAttribute()}</span>
+                </p>
+                <p>
+                    Concentration: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p class='secondary-attribute'>
+                    Decisions: <span>${secondaryAttribute()}</span>
+                </p>
+                <p>
+                    Determination: <span>${personalityAttributes()}</span>
+                </p>
+                <p>
+                    Flair: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p>
+                    Leadership: <span>${personalityAttributes()}</span>
+                </p>
+                <p class='primary-attribute'>
+                    Off The Ball: <span>${primaryAttribute()}</span>
+                </p>
+                <p class='secondary-attribute'>
+                    Positioning: <span>${secondaryAttribute()}</span>
+                </p>
+                <p class='primary-attribute'>
+                    Teamwork: <span>${personalityAttributes()}</span>
+                </p>
+                <p>
+                    Vision: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p class='primary-attribute'>
+                    Work Rate: <span>${personalityAttributes()}</span>
+                </p>
+            </div>
+        
+            <div class='physical'>
+                <h3>Physical</h3>
+                <p class='secondary-attribute'>
+                    Acceleration: <span>${secondaryAttribute()}</span>
+                </p>
+                <p>
+                    Agility: <span>${tertiaryAttribute()}</span>
+                </p>
+                <p class='secondary-attribute'>
+                    Balance: <span>${secondaryAttribute()}</span>
+                </p>
+                <p>
+                    Jumping Reach: <span>0</span>
+                </p>
+                <p>
+                    Natural Fitness: <span>${fitnessAttributes()}</span>
+                </p>
+                <p class='secondary-attribute'>
+                    Pace: <span>${secondaryAttribute()}</span>
+                </p>
+                <p class='primary-attribute'>
+                    Stamina: <span>${primaryAttribute()}</span>
+                </p>
+                <p  class='secondary-attribute'>
+                    Strength: <span>${secondaryAttribute()}</span>
+                </p>
             </div>
         </div>
     `;
@@ -730,6 +858,10 @@ function dropdownChoice() {
     else if (roleListValue === "ap-s") {
         dropChoiceEle.style.display = 'inline-block';
         advPlaSup();
+    }
+    else if (roleListValue === "b2b-s") {
+        dropChoiceEle.style.display = 'inline-block';
+        boxBoxSup();
     }
     else if (roleListValue === "bpd-c") {
         dropChoiceEle.style.display = 'inline-block';
