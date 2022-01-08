@@ -1810,4 +1810,36 @@ function dropdownChoice() {
     */
 };
 
-roleList.addEventListener("change", dropdownChoice());
+// roleList.addEventListener("change", dropdownChoice());
+
+// The following arrays will contain roles based on their position on the pitch, 
+// which will be used to deterimine the height and weight of players so it fits their role and we don't have 1.70cm tall centerbacks anymore.
+// This array contain all central defender roles.
+const centralDefenderRoles = ["bpd-c", "bpd-d", "bpd-s", "cd-c", "cd-d", "cd-s"]
+// Variable to store the HTML element with the ID physAttributes
+const pAtt = document.getElementById("physAttributes");
+// This function creates a random height for central defenders
+const centDefHeight = () => genRandomNum(180, 203);
+// This function creates a random weight for central defenders
+const centDefWeight = () => genRandomNum(70, 95);
+
+// Height and weight calculations depending on position choice.
+function heightWeightCalc() {
+    if (roleListValue === 'bpd-d') {
+        // to determine the weight we must run the centDefHeight function and store it in a variable before we parse it into our html
+        const playerHeight = centDefHeight();
+        const playerWeight = playerHeight - (100 + genRandomNum(0, 15));
+        pAtt.innerHTML = `
+            <p>Height: ${playerHeight}cm</p>
+            <p>Weight: ${playerWeight}kg</p>
+        `;
+    }
+};
+
+function dropdownHeightWeight() {
+    dropdownChoice();
+    heightWeightCalc();
+}
+
+// set an event listener on the new section to react to changes in roleList
+roleList.addEventListener("change", dropdownHeightWeight());
