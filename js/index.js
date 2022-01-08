@@ -35,13 +35,13 @@ hiddenAttributesElement.addEventListener("load", hiddenAttributesBlock());
 // Primary, Secondary and Tertiary attributes definitions
 // current stats are for youth players at around 75 ca
 // Primary Attributes
-const primaryAttribute = () => genRandomNum(9, 14);
+const primaryAttribute = () => genRandomNum(12, 16);
 
 // Secondary Attributes
-const secondaryAttribute = () => genRandomNum(7, 12);
+const secondaryAttribute = () => genRandomNum(10, 14);
 
 // Tertiery Attributes
-const tertiaryAttribute = () => genRandomNum(5, 9);
+const tertiaryAttribute = () => genRandomNum(5, 11);
 
 // Personality Attributes
 const personalityAttributes = () => genRandomNum(10, 17);
